@@ -32,12 +32,11 @@ class Song
         return song 
       end
     end 
+    return nil
   end 
   
   def self.find_or_create_by_name(name) 
-    if name.nil? 
-      return nil
-    elsif self.find_by_name(name)
+    if self.find_by_name(name)
       return self.find_by_name(name)
     else
       return self.create_by_name(name)
