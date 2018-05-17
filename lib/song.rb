@@ -35,7 +35,7 @@ class Song
   end 
   
   def self.find_or_create_by_name(name) 
-    if name == ' '
+    if name.empty? 
       return nil
     elsif self.find_by_name(name)
       return self.find_by_name(name)
